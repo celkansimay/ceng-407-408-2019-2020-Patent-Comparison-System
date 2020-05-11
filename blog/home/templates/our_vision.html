@@ -52,10 +52,10 @@
     </div>
 </div> -->
    <div class="navbar-container">
-      <nav class="navbar navbar-expand-lg navbar-light" data-overlay="" data-sticky="top">
+     <nav class="navbar navbar-expand-lg navbar-light" data-overlay="" data-sticky="top">
         <div class="container">
           <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
-            <img alt="Jumpstart" data-inject-svg="" src="assets\img\logos\jumpstart.svg">
+            <img alt="Jumpstart" data-inject-svg="" src=""{% static '/img/logos/jumpstart.svg' %}">
           </a>
           <div class="d-flex align-items-center order-lg-3">
             <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target=".navbar-collapse" data-toggle="collapse" type="button">
@@ -70,20 +70,25 @@
                   <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="#" role="button">Patent</a>
                   <div class="row dropdown-menu">
                     <div class="col-auto" data-dropdown-content="">
-                      <div class="dropdown-grid-menu"><a href="patent-1.html" class="dropdown-item fade-page">What is a Patent?</a><a href="patent-2.html" class="dropdown-item fade-page">Why should I get a patent?</a><a href="patent-3.html" class="dropdown-item fade-page">How to Compare Patent Content ?</a><a href="patent-4.html" class="dropdown-item fade-page">Patent Classification</a><a href="patent-5.html" class="dropdown-item fade-page">Sample Patent</a>
+                      <div class="dropdown-grid-menu">
+                        <a href="{% url 'patent_one_view' %}" class="dropdown-item fade-page">What is a Patent?</a>
+                        <a href="{% url 'patent_second_view' %}" class="dropdown-item fade-page">Why should I get a patent?</a>
+                        <a href="{% url 'patent_third_view' %}" class="dropdown-item fade-page">How to Compare Patent Content ?</a>
+                        <a href="{% url 'patent_fourth_view' %}" class="dropdown-item fade-page">Patent Classification</a>
+                        <a href="{% url 'patent_fifth_view' %}" class="dropdown-item fade-page">Sample Patent</a>                      
                       </div>
                     </div>
                   </div>
-                </div>
+                </div
               </li>
               <li class="nav-item">
-                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item arrow-bottom" href="company-about-2.html" role="button">Our Vision and Mission</a>
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item arrow-bottom" href="{% url 'our_vision_view' %}" role="button">Our Vision and Mission</a>
               </li>
               <li class="nav-item">
-                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="company-about-1.html" role="button">Who we are ?</a>
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item arrow-bottom" href="{% url 'who_we_are_view' %}" role="button">Who we are ?</a>
               </li>
               <li class="nav-item">
-                  <a aria-expanded="false" aria-haspopup="true" class=" nav-link nav-item arrow-bottom" href="contact.html" role="button">Contact</a>
+                  <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item arrow-bottom" href="{% url 'contact_view' %}" role="button">Contact</a>
               </li>
             </ul>
           </div>
