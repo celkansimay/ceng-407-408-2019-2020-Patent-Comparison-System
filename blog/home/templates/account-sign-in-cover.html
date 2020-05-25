@@ -12,6 +12,23 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-52115242-17');
+	  function signInClicked(){
+	  
+	  var email = document.getElementById("email").value;
+	  var pass = document.getElementById("pass").value;
+	 
+	   if(email.length==0 || pass.length==0){
+	   alert("Please check email or password :(");
+	   }
+	   else {
+		   var data = {'email': email, 'password': pass};
+		   $.get("../index", data, function(  ) {
+				 alert("Your account is valid =)");
+			});
+		}
+	  
+	}
+	  }
     </script>
 
     <meta charset="utf-8">
@@ -48,10 +65,10 @@
                 <div class="card card-body shadow text-left text-dark">
                   <form>
                     <div class="form-group">
-                      <input type="email" class="form-control" name="sign-up-email" placeholder="Email Address">
+                      <input id="email" type="email" class="form-control" name="sign-up-email" placeholder="Email Address">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" name="sign-up-password" placeholder="Password">
+                      <input id="pass" type="password" class="form-control" name="sign-up-password" placeholder="Password">
                       <div class="text-right text-small mt-2">
                         <a href="{% url 'forgot_password_view'%}">Forgot Password?</a>
                       </div>
@@ -62,7 +79,7 @@
                         <label class="custom-control-label" for="sign-in-remember">Remember me next time</label>
                       </div>
                     </div>
-                     <button class="btn btn-primary btn-block" type="submit"><a href="{% url 'home_view' %}">Create Account</a></button>
+                    <input type="button" href="index.html" onclick = "signInClicked()" class="btn btn-primary btn-block" >Sign In</button>
                   </form>
                 </div>
                 <div class="text-center text-small mt-3">

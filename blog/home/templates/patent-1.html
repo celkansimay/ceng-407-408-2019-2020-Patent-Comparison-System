@@ -51,11 +51,11 @@
         </div>
     </div>
 </div> -->
-    <div class="navbar-container">
-      <nav class="navbar navbar-expand-lg navbar-light" data-overlay="" data-sticky="top">
+   <div class="navbar-container">
+       <nav class="navbar navbar-expand-lg navbar-light" data-overlay="" data-sticky="top">
         <div class="container">
           <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
-            <img alt="Jumpstart" data-inject-svg="" src="{% static '\img\logos\jumpstart.svg'%}">
+            <img alt="Jumpstart" data-inject-svg="" src=""{% static '/img/logos/jumpstart.svg' %}">
           </a>
           <div class="d-flex align-items-center order-lg-3">
             <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target=".navbar-collapse" data-toggle="collapse" type="button">
@@ -70,10 +70,16 @@
                   <a aria-expanded="false" aria-haspopup="true" class="dropdown-toggle nav-link nav-item arrow-bottom" data-toggle="dropdown-grid" href="#" role="button">Patent</a>
                   <div class="row dropdown-menu">
                     <div class="col-auto" data-dropdown-content="">
- <div class="dropdown-grid-menu"><a href="{% url 'patent_one_view' %}" class="dropdown-item fade-page">What is a Patent?</a><a href="{% url 'patent_second_view' %}" class="dropdown-item fade-page">Why should I get a patent?</a><a href="{% url 'patent_third_view' %}" class="dropdown-item fade-page">How to Compare Patent Content ?</a><a href="{% url 'patent_fourth_view' %}" class="dropdown-item fade-page">Patent Classification</a><a href="{% url 'patent_fifth_view' %}" class="dropdown-item fade-page">Sample Patent</a>                      </div>
+                      <div class="dropdown-grid-menu">
+                        <a href="{% url 'patent_one_view' %}" class="dropdown-item fade-page">What is a Patent?</a>
+                        <a href="{% url 'patent_second_view' %}" class="dropdown-item fade-page">Why should I get a patent?</a>
+                        <a href="{% url 'patent_third_view' %}" class="dropdown-item fade-page">How to Compare Patent Content ?</a>
+                        <a href="{% url 'patent_fourth_view' %}" class="dropdown-item fade-page">Patent Classification</a>
+                        <a href="{% url 'patent_fifth_view' %}" class="dropdown-item fade-page">Sample Patent</a>                      
+                      </div>
                     </div>
                   </div>
-                </div>
+                </div
               </li>
               <li class="nav-item">
                   <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item arrow-bottom" href="{% url 'our_vision_view' %}" role="button">Our Vision and Mission</a>
@@ -83,8 +89,7 @@
               </li>
               <li class="nav-item">
                   <a aria-expanded="false" aria-haspopup="true" class="nav-link nav-item arrow-bottom" href="{% url 'contact_view' %}" role="button">Contact</a>
-              </li>            
-        
+              </li>
             </ul>
           </div>
         </div>
@@ -117,7 +122,7 @@
         <div class="row align-items-center justify-content-around">
           <div class="col-md-9 col-lg-6 col-xl-5 mb-4 mb-lg-0 order-lg-2 pl-lg-5 pl-xl-0">
             <div>
-              <h2 class="h1 text-center text-lg-left">ACIKLAMA</h2>
+              
               <div class="d-flex flex-wrap justify-content-center justify-content-lg-start">
                 <div class="my-4">
                   <div class="d-flex">
@@ -125,9 +130,9 @@
                       <img src="{% static '\img\icons\theme\navigation\route.svg' %}" alt="Binoculars icon" class="icon bg-primary" data-inject-svg="">
                     </div>
                     <div>
-                      <h5>Fully Responsive</h5>
+                      <h5>Definition</h5>
                       <div>
-                        Ned ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque Arya.
+                        A patent is an intellectual property right for a technical invention. It allows you to prevent others from using your invention for commercial purposes for up to 20 years. You decide who is allowed to produce, sell or import your invention in those countries in which you own a valid patent. You can also trade your patent, e.g. sell it or licence the use of your invention.
                       </div>
                     </div>
                   </div>
@@ -138,9 +143,9 @@
                       <img src="{% static '\img\icons\theme\layout\layout-left-panel-2.svg' %}" alt="Layouts icon" class="icon bg-primary" data-inject-svg="">
                     </div>
                     <div>
-                      <h5>Multiple Layouts</h5>
+                      <h5>What Can be Patented?</h5>
                       <div>
-                        Non pulvinar neque laoreet suspendisse interdum Catelyn libero id. Olenna imp leo in vitae turpis massa. Sapien habitant Tyrion.
+                        You can patent products (e.g. heated ski boots) and processes (e.g. a method for freeze-drying coffee). However, the invention must solve a problem in a new, non-obvious and technical way. In the example of the ski boots, the problem of cold feet while skiing is solved by fitting self-regulating heating elements to the boots.
                       </div>
                     </div>
                   </div>
@@ -149,7 +154,7 @@
             </div>
           </div>
           <div class="col-md-9 col-lg-6 col-xl-5 order-lg-1">
-            <img src="{% static '\img\illustrations\illustration-3.svg' %}" alt="Image" class="img-fluid">
+            <img src="{% static '\img\what-is-patent.png' %}" alt="Image" class="img-fluid">
           </div>
         </div>
       </div>
@@ -178,45 +183,23 @@
             <h5>Patent</h5>
             <ul class="nav flex-row flex-md-column">
               <li class="nav-item mr-3 mr-md-0">
-                <a href="{% url 'patent_one_view' %}" class="dropdown-item fade-page">What is a Patent?</a>
+                <a href="landing-1.html" class="nav-link fade-page px-0 py-2">What is a Patent ?</a>
               </li>
               <li class="nav-item mr-3 mr-md-0">
-               <a href="{% url 'patent_second_view' %}" class="dropdown-item fade-page">Why should I get a patent?</a>
+                <a href="landing-2.html" class="nav-link fade-page px-0 py-2">Why should I get a Patent ?</a>
               </li>
               <li class="nav-item mr-3 mr-md-0">
-                 <a href="{% url 'patent_third_view' %}" class="dropdown-item fade-page">How to Compare Patent Content ?</a>
+                <a href="landing-3.html" class="nav-link fade-page px-0 py-2">How to Compare Patent Content ?</a>
               </li>
               <li class="nav-item mr-3 mr-md-0">
-               <a href="{% url 'patent_fourth_view' %}" class="dropdown-item fade-page">Patent Classification</a>
+                <a href="landing-4.html" class="nav-link fade-page px-0 py-2">Patent Classification</a>
               </li>
               <li class="nav-item mr-3 mr-md-0">
-                <a href="{% url 'patent_fifth_view' %}" class="dropdown-item fade-page">Sample Patent</a>
+                <a href="landing-5.html" class="nav-link fade-page px-0 py-2">Sample Patent</a>
               </li>
             </ul>
           </div>
-          <div class="col-xl-auto mr-xl-5 col-md-3">
-            <h5>Pages</h5>
-            <ul class="nav flex-row flex-md-column">
-              <li class="nav-item mr-3 mr-md-0">
-                <a href="company-about-1.html" class="nav-link fade-page px-0 py-2">Company</a>
-              </li>
-              <li class="nav-item mr-3 mr-md-0">
-                <a href="blog-listing-1.html" class="nav-link fade-page px-0 py-2">Blog</a>
-              </li>
-              <li class="nav-item mr-3 mr-md-0">
-                <a href="help-center-home.html" class="nav-link fade-page px-0 py-2">Help Center</a>
-              </li>
-              <li class="nav-item mr-3 mr-md-0">
-                <a href="careers-1.html" class="nav-link fade-page px-0 py-2">Careers</a>
-              </li>
-              <li class="nav-item mr-3 mr-md-0">
-                <a href="case-studies.html" class="nav-link fade-page px-0 py-2">Case Studies</a>
-              </li>
-              <li class="nav-item mr-3 mr-md-0">
-                <a href="pricing-plans.html" class="nav-link fade-page px-0 py-2">Pricing</a>
-              </li>
-            </ul>
-          </div>
+         
         </div>
         <div class="row">
           <div class="col">

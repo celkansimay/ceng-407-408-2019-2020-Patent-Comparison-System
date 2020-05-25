@@ -27,6 +27,8 @@ from home.views import patent_fifth_view
 from home.views import contact_view
 from home.views import who_we_are_view
 from home.views import our_vision_view
+from home.views import submit
+from home.views import result_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -42,5 +44,8 @@ urlpatterns = [
     path('contact/',contact_view,name='contact_view'),
     path('who_we_are/',who_we_are_view,name='who_we_are_view'),
     path('our_vision/',our_vision_view,name='our_vision_view'),
-
+    path('submit/', submit, name='submit'),
+    path('result/', result_view, name='result_view'),
 ]
+
+

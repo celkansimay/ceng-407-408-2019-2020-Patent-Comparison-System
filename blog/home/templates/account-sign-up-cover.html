@@ -12,6 +12,40 @@
       gtag('js', new Date());
     
       gtag('config', 'UA-52115242-17');
+	  
+	  function createAccountClicked() {
+		
+			var email = document.getElementById("email").value;
+			var pass1 = document.getElementById("pass1").value;
+			var pass2 = document.getElementById("pass2").value;
+			var checked = document.getElementById("sign-up-agree").checked;
+			
+			if (pass1.length == 0) {
+					alert("Please enter password =(");
+
+			}
+			else
+			{
+				if (pass1 != pass2)
+				{
+					alert("Your passwords doesn't match =(");;
+					document.getElementById("pass1").value = "";
+					document.getElementById("pass2").value = "";
+				}
+				else {
+					if (checked == false) {
+						alert("Please agree terms & conditions license");
+					}
+					else {
+				
+						var data = {'email': email, 'pass': pass1};
+						$.get("../sign_up", data, function(  ) {
+							alert("Your account is created =)");
+							});
+					}
+				}
+			}
+	  }
     </script>
 
     <meta charset="utf-8">
@@ -51,16 +85,23 @@
                 <div class="card card-body shadow text-left text-dark">
                   <form>
                     <div class="form-group">
-                      <input type="email" class="form-control" name="sign-up-email" placeholder="Email Address">
+                      <input id="email" type="email" class="form-control" name="sign-up-email" placeholder="Email Address">
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" name="sign-up-password" placeholder="Password">
+                      <input id="pass1" type="password" class="form-control" name="sign-up-password" placeholder="Password">
                       <small>Password must be at least 8 characters</small>
                     </div>
                     <div class="form-group">
-                      <input type="password" class="form-control" name="sign-up-password-confirm" placeholder="Confirm Password">
+                      <input id="pass2" type="password" class="form-control" name="sign-up-password-confirm" placeholder="Confirm Password">
                     </div>
-                    <button class="btn btn-primary btn-block" type="submit"><a href="{% url 'home_view' %}">Create Account</a></button>
+                    <div class="form-group">
+                      <div class="custom-control custom-checkbox text-small">
+                        <input type="checkbox" class="custom-control-input" id="sign-up-agree">
+                        <label class="custom-control-label" for="sign-up-agree">I agree to the <a target="_blank" href="utility-legal-terms.html">Terms &amp; Conditions</a>
+                        </label>
+                      </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block" type="submit" onClick="createAccountClicked()">Create Account</input>
                   </form>
                 </div>
                 <div class="text-center text-small mt-3">
